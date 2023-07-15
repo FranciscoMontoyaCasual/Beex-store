@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Beex Store | Nueva Venta</title>
+    <link rel="icon" href="img/leaf.svg" sizes="any" type="image/svg+xml">
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="sidebar-toggled">
+
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+            </a>
+
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Reportes</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="sales.html">
+                    <i class="fas fa-money-bill"></i>
+                    <span>Ventas</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="purchases.html">
+                    <i class="fa fa-shopping-bag"></i>
+                    <span>Compras</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="clients.html">
+                    <i class="fa fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="invoices.html">
+                    <i class="fas fa-file-invoice"></i>
+                    <span>Facturas</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="products.html">
+                    <i class="fa fa-tag"></i>
+                    <span>Productos</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="sale.html">
+                    <i class="fas fa-plus-circle fa-lg"></i>
+                    <span>Nueva Venta</span></a>
+            </li>
+
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars" ></i>
+                    </button>
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Javier Montoya</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Ajustes
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Historial
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="card border-left-info shadow mb-4">
+                                <div class="card-header">
+                                    <h1 class="h3 mb-0 text-gray-900">Resumen de compra</h1>
+                                </div>
+                                <div class="card-body">
+                                    <form class="form-inline">
+                                        <div class="form-group mb-2">
+                                            <input type="text" class="form-control bg-light border-0" id="product" placeholder="Producto">
+                                        </div>
+                                        <div class="form-group mx-sm-2 mb-2">
+                                            <input type="text" class="form-control bg-light border-0" id="quantity" placeholder="Cantidad">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                          <input type="text" class="form-control bg-light border-0" id="client" placeholder="Cliente">
+                                        </div>
+                                        <div class="form-group mx-sm-2 mb-2">
+                                            <input type="text" class="form-control bg-light border-0" id="promotion" placeholder="Promocion">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mb-2">Agregar producto</button>
+                                        <button type="submit" class="btn btn-danger ml-2 mb-2">Vaciar compra</button>
+                                    </form>
+                                    <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="py-2">
+                                                            <span class="d-block text-muted">Fecha de compra</span>
+                                                            <span>07 Julio 2023</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="py-2">
+                                                            <span class="d-block text-muted">Numero de compra</span>
+                                                            <span>BX-567421</span>  
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="py-2">
+                                                            <span class="d-block text-muted">Cliente</span>
+                                                            <span>Javier Montoya</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="py-2">
+                                                            <span class="d-block text-muted">Promociones</span>
+                                                            <span>No</span>    
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>                           
+                                    </div>
+                                    <div class="product border-bottom table-responsive">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="10%">
+                                                        <img src="/img/product.webp" width="90">
+                                                    </td> 
+                                                    <td width="60%">
+                                                        <span class="font-weight-bold">Jabon de mano</span>
+                                                        <div class="product-qty">
+                                                            <span class="d-block">Cantidad: 1</span>
+                                                        </div>
+                                                    </td>
+                                                    <td width="10%">
+                                                        <div class="text-right">
+                                                            <span class="font-weight-bold">$20.00</span>
+                                                        </div>
+                                                    </td>
+                                                    <td width="10%">
+                                                        <button class="btn btn-danger">Eliminar</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="20%">  
+                                                        <img src="/img/product.webp" width="90">
+                                                    </td>
+                                                    <td width="60%">
+                                                        <span class="font-weight-bold">Jabon de mano</span>
+                                                        <div class="product-qty">
+                                                            <span class="d-block">Cantidad: 1</span>    
+                                                        </div>
+                                                    </td>
+                                                    <td width="10%">
+                                                        <div class="text-right">
+                                                            <span class="font-weight-bold">$20.00</span>
+                                                        </div>
+                                                    </td>
+                                                    <td width="10%">
+                                                        <button class="btn btn-danger">Eliminar</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>        
+                                        </table>   
+                                    </div>
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-md-5">
+                                            <table class="table table-borderless">
+                                                <tbody class="totals">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text-left">
+                                                                <span class="text-muted">Subtotal</span>        
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span>$34.40</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text-left">
+                                                                <span class="text-muted">Impuestos</span>
+                                                                    
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span>$15.60</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="text-left">
+                                                                <span class="text-muted">Descuento</span>        
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span class="text-success">$0.00</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-top border-bottom">
+                                                        <td>
+                                                            <div class="text-left">
+                                                                <span class="font-weight-bold">Total</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-right">
+                                                                <span class="font-weight-bold">$40.00</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-top border-bottom">
+                                                        <td>
+                                                            <button type="submit" class="btn btn-primary mb-2" data-toggle="modal" data-target="#saleModal">Realizar compra</button>
+                                                        </td>
+                                                    </tr>   
+                                                </tbody>                                            
+                                            </table>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cerrar sesión</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Seleccione cerrar sesión para salir sino cancelar.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="login.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="modal fade" id="saleModal" tabindex="-1" role="dialog" aria-labelledby="saleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="saleModalLabel">Numero de compra: BX-567421</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <input class="form-control bg-light border-0 mb-2" type="text" placeholder="Monto pagado">
+            <select class="form-control bg-light border-0">
+                <option>Efectivo</option>
+                <option>Tarjeta</option>
+                <option>Transferencia</option>
+            </select>
+            <div class="row d-flex justify-content-end">
+                <div class="col-md-5">
+                    <table class="table table-borderless">
+                        <tbody class="totals">
+                            <tr>
+                                <td>
+                                    <div class="text-left">
+                                        <span class="text-muted">Pagado</span>        
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-right">
+                                        <span class="text-success">$40.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="text-left">
+                                        <span class="text-muted">Por pagar</span>
+                                            
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-right">
+                                        <span class="text-danger">$0.00</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>                                            
+                    </table>   
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Pagar</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
